@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CDB from '../services/CDB';
+import CDB from './services/CDB';
 import { LineChart, Line } from 'recharts';
 
 
