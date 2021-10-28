@@ -4,11 +4,12 @@ import { LineChart, Line } from 'recharts';
 
 
 export default class Heat_map extends Component {
-state= {
+
+state = {
     the_datas: [], 
     the_data: [],
     selectedOption: null
-    
+
 }
 
 // this function runs each time the page is loaded, runs the function below
