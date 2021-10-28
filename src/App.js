@@ -7,6 +7,9 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 // Pages
 
 import Home from "./Home";
+import Home from "./Heat_map";
+import Home from "./Bars";
+import Home from "./Seyed";
 
 
 function App() {
@@ -22,14 +25,14 @@ function App() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/Heatmap">Heat Map</Link></li>
             <li><Link to="/Bars">Statistics</Link></li>
-            <li><Link to="/seyed">Seyed Page (undetermined yet)</Link></li>
+            <li><Link to="/Seyed">Seyed Page (undetermined yet)</Link></li>
             
         </ul>
         <Switch>
             <Route exact path="/"><Home /></Route>
             <Route path="/Heatmap"><Heat_map /></Route>
             <Route path="/Bars"><Bars /></Route>
-            <Route path="/seyed"><Seyed /></Route>
+            <Route path="/Seyed"><Seyed /></Route>
 
 
             
