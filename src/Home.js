@@ -4,7 +4,7 @@ import './App.css';
 //import { Link } from 'react-router';
 
 
-
+/*
 class Home extends Component {
 
     render(){
@@ -23,3 +23,4 @@ class Home extends Component {
 
 
 export default Home;
+*/
