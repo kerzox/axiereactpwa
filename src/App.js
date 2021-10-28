@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import CDB from '../services/CDB';
+
 import { LineChart, Line } from 'recharts';
 
 
