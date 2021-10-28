@@ -8,12 +8,12 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
 
-class Home extends Component {
+class Seyed extends Component {
 
     render(){
 		return(
 			<div>
-				<h1>Welcome to the home page</h1>
+				<h1>Page for seyed</h1>
 				
 			</div>
 		);
@@ -25,4 +25,4 @@ class Home extends Component {
 }
 
 
-export default Home;
+export default Seyed;

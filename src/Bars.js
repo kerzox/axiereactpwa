@@ -8,13 +8,14 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
 
-class Home extends Component {
+class Bars extends Component {
 
     render(){
 		return(
 			<div>
-				<h1>Welcome to the home page</h1>
-				
+				<h1>Page for Mark</h1>
+
+               
 			</div>
 		);
 	}
@@ -25,4 +26,4 @@ class Home extends Component {
 }
 
 
-export default Home;
+export default Bars;
