@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 
 // Pages
@@ -27,11 +27,8 @@ function App() {
         </ul>
         <Switch>
             <Route exact path="/"><Home /></Route>
-            <Route path="/Home"><Stocks /></Route>
-            <Route path="/Home"><Quote /></Route>
-            <Route path="/Home"><Price_History /></Route>
-            <Route path="/Home"><Register /></Route>
-            <Route path="/Home"><Login /></Route>
+            <Route path="/Home"><Home /></Route>
+            
            
         </Switch>
             </div>
