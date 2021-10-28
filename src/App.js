@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // Pages
 
-import Home from "./src/Home";
+import Home from "./src/Home.js";
 
 
 function App() {
