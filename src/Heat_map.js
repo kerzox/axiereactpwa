@@ -8,6 +8,7 @@ state= {
     the_datas: [], 
     the_data: [],
     selectedOption: null
+    
 }
 
 // this function runs each time the page is loaded, runs the function below
