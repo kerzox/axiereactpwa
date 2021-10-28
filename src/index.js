@@ -4,11 +4,20 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+
+<Router>
+  <Switch>
+    <Route exact path="/Home" component={Homepage}/>
+  </Switch>
+</Router>,
   document.getElementById('root')
 );
 

@@ -2,6 +2,19 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+const Homepage = () => {
+	return (
+		<div>
+				<Header/>
+				<h1>Homepage </h1>
+				<Link to='/about'>Go to Aboutpage</Link>
+		</div>
+	)
+};
+
+
+
 function App() {
   return (
     <div className="App">

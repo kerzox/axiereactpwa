@@ -3,9 +3,9 @@ import CDB from '../services/CDB';
 import { LineChart, Line } from 'recharts';
 
 
-export default class Heat_map {
+export default class Heat_map extends Component {
 state= {
-    the_datas: [],
+    the_datas: [], 
     the_data: [],
     selectedOption = null
 
