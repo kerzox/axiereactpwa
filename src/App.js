@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import { Link } from 'react-router-dom';
 
 
 function App() {
@@ -21,8 +21,9 @@ function App() {
           Hello this is a test
         </a>
 
-        <a href="Heat_map.js">Heat map</a>
-        <a href="Home.js">Home page</a>
+       <a href="Heat_map.js">Heat map</a>
+       <a href="Home.js">Home page</a>
+
 
       </header>
     </div>
