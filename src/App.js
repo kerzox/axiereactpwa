@@ -9,7 +9,7 @@ import { LineChart, Line } from 'recharts';
 
 // Pages
 
-import Home from "/Home";
+import Home from "./src/Home";
 
 
 function App() {
@@ -24,17 +24,17 @@ function App() {
         <ul>
             <li id="nav_logo"><img src="https://library.kissclipart.com/20180918/hkw/kissclipart-growth-transparent-background-icon-clipart-compute-bc96952ffedccf89.png" width="80" height="40" alt="Logo"></img></li>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="Home">Stocks</Link></li>
-            <li style={{ float: "right" }}><Link to="Home">Login</Link></li>
-            <li style={{ float: "right" }}><Link to="Home">Register</Link></li>
+            <li><Link to="/Home">Stocks</Link></li>
+            <li style={{ float: "right" }}><Link to="/Home">Login</Link></li>
+            <li style={{ float: "right" }}><Link to="/Home">Register</Link></li>
         </ul>
         <Switch>
             <Route exact path="/"><Home /></Route>
-            <Route path="Home"><Stocks /></Route>
-            <Route path="Home"><Quote /></Route>
-            <Route path="Home"><Price_History /></Route>
-            <Route path="Home"><Register /></Route>
-            <Route path="Home"><Login /></Route>
+            <Route path="/Home"><Stocks /></Route>
+            <Route path="/Home"><Quote /></Route>
+            <Route path="/Home"><Price_History /></Route>
+            <Route path="/Home"><Register /></Route>
+            <Route path="/Home"><Login /></Route>
            
         </Switch>
             </div>
