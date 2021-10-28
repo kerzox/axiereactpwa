@@ -1,11 +1,11 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Link } from 'react-router';
+import React, { Component } from 'react';
+
 
 
 class Home extends Component {
-
-
 
     render(){
 		return(
