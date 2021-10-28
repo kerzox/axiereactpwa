@@ -4,7 +4,7 @@ import './App.css';
 //import { Link } from 'react-router';
 
 import { Link } from 'react-router';
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
 
