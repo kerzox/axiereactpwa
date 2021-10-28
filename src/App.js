@@ -7,9 +7,9 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 // Pages
 
 import Home from "./Home";
-import Home from "./Heat_map";
-import Home from "./Bars";
-import Home from "./Seyed";
+import Heat_map from "./Heat_map";
+import Bars from "./Bars";
+import Seyed from "./Seyed";
 
 
 function App() {
