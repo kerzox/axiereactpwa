@@ -12,12 +12,6 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-
-<Router>
-  <Switch>
-    <Route exact path="/Home" component={Homepage}/>
-  </Switch>
-</Router>,
   document.getElementById('root')
 );
 
