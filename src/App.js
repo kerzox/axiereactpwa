@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> gooba gooba.
+          Edit <code>src/App.js</code> gooba gooba updated.
         </p>
         <a
           className="App-link"
@@ -20,6 +20,8 @@ function App() {
         </a>
 
         <a href="Heat_map.js">Heat map</a>
+        <a href="Home.js">Home page</a>
+
       </header>
     </div>
   );
