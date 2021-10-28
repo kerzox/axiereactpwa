@@ -97,6 +97,25 @@ render(){
             {renderLineChart}
 
 
+            {/* import numpy as np
+import numpy.random
+import matplotlib.pyplot as plt
+
+x = [1,3,4,5,3,4,2,2,4,5,3,2,5]
+y = [3,4,5,1,2,3,4,5,1,2,3,4,5]
+
+#x = [1,1,1,1,1,4,2,1,1,1,1]
+#y = [1,1,1,1,2,1,1,1,4,4,1]
+
+
+heatmap, xedges, yedges = np.histogram2d(x, y, bins=5)
+extent = [xedges[0], xedges[-1], yedges[0], yedges[-1]]
+
+plt.clf()
+plt.imshow(heatmap.T, extent=extent, origin='lower', interpolation='nearest', cmap='hot')
+plt.show()*/}
+
+
 
         </div>
 

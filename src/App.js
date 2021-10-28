@@ -18,6 +18,8 @@ function App() {
         >
           Hello this is a test
         </a>
+
+        <a href="Heat_map.js">Heat map</a>
       </header>
     </div>
   );
