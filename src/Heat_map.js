@@ -52,7 +52,7 @@ export default class Heat_map extends Component {
 
 
         const d = Object.entries(this.state.a2_data).map(([key, value]) => (
-            <option key={key}>{key} - {value}</option>
+          <div><option key={key}>{key} - {value}</option></div>  
         ));
 
 
