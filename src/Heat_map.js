@@ -10,7 +10,9 @@ export default class Heat_map extends Component {
         a2_data: [],
         a2_datas: [], 
         selectedOption: null,
-        Co_ords: []
+        X_Coords: [],
+        Y_Coords: []
+
 
     }
 
@@ -46,7 +48,8 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
-                console.log(a2_data)
+                console.log(a2_data.payload)
+                
                 
 
             })
