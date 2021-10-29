@@ -65,36 +65,12 @@ export default class Heat_map extends Component {
     };
 
 
-    get_co_ords(){
-        CDB.get(`/a2_data/_all_docs`, {
-            responseType: 'json',
-        })
-
-
-        .then(response => {
-            const Co_ords = response.data.rows;
-            this.setState({ Co_ords })
-            console.log(Co_ords[0].payload)
-         })
-        .catch(error => console.error(`Error: ${error}`))
-
-
-       const cords = Co_ords;
-
-       return (
-        <ul>
-            {cords.map(s => (<li>{s}</li>))}
-        </ul>
-    );
-
-    }
-
+   
 
     render() {
 
         const mydoc  = this.getOneDoc();
 
-        const some_cords = this.get_co_ords();
 
        // const renderLineChart = (
         //    <LineChart width={400} height={400} data={a2_datas}>
@@ -130,7 +106,6 @@ export default class Heat_map extends Component {
             {/* don't need html to return mydoc as there is html in the getonedoc function in the return statement*/ }
                 {mydoc}
 
-                {some_cords}
 
 
              {/*same case here, just rendering the linedoc of the data*/ }
