@@ -98,7 +98,6 @@ export default class Heat_map extends Component {
                 {mydoc}
 
              {/*same case here, just rendering the linedoc of the data*/ }
-                {renderLineChart}
 
 
             {/* import numpy as np
