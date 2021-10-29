@@ -57,7 +57,7 @@ export default class Heat_map extends Component {
         ));
 
 
-        return (<div>{a2_datas}</div>)
+        return (<div>{d}</div>)
 
 
     };
