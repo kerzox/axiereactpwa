@@ -77,7 +77,7 @@ export default class Heat_map extends Component {
         console.log("all coords retrieved I hope")
     };
 
-    get_all_cords();
+    get_all_cords()
 
     render() {
         var { a2_datas, a2_data, X_Coords, Y_Coords } = this.state
