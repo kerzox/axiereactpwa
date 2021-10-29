@@ -86,7 +86,7 @@ export default class Heat_map extends Component {
 
 
                     {this.state.a2_datas.map((item) => 
-                        <li key={item.id}>{item.id}
+                        <li key={item.value}>{item.value}
                             <button onClick={() => this.getOneDoc(item.d)}>Get more info</button>
                         </li>
                     )}
@@ -96,7 +96,7 @@ export default class Heat_map extends Component {
 
                 <select onChange={(selectedOption) => this.getOneDoc(selectedOption.target.value)}>
                         {this.state.a2_datas.map((option) => (
-                            <option key={option.payload.d.x_cord}>{option.payload.d.x_cord}</option>
+                            <option key={option.value}>{option.value}</option>
                             
                         ))}
                 </select>
