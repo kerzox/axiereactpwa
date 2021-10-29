@@ -65,22 +65,23 @@ export default class Heat_map extends Component {
             
     };
 
-
+   // ${this.a2_datas[i].id}
     get_all_cords(){
 
         console.log("retrieving coords")
-        for (var i = 0; i < 34565; i++) {
-            this.getOneDoc(`${this.a2_datas[i].id}`)
+        for (var i = 0; i < 3; i++) {
+            this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
 
         };
 
         console.log("all coords retrieved I hope")
     };
 
+    get_all_cords();
 
     render() {
         var { a2_datas, a2_data, X_Coords, Y_Coords } = this.state
-        const retrievecords = this.getOneDoc();
+        
 
         // This will make everything visible, if it's in here it can be seen on the page
         return( 
@@ -105,7 +106,7 @@ export default class Heat_map extends Component {
 
               
 
-              {retrievecords}
+              
               {/*}  <ul id="docs">
 
 
