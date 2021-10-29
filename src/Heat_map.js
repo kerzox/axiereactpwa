@@ -97,6 +97,7 @@ export default class Heat_map extends Component {
                 </ul>
 
                 <select onChange={(selectedOption) => this.getOneDoc(selectedOption.target.value)}>
+                        <h1>{selectedOption.target.value}</h1>
                         {this.state.a2_datas.map((option) => (
                             <option key={option.id}>{option.id}</option>
                             
