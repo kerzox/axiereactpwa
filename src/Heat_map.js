@@ -6,8 +6,8 @@ import { LineChart, Line } from 'recharts';
 export default class Heat_map extends Component {
 
     state = {
-         the_datas: [], 
-        the_data: [],
+        a2_datas: [], 
+        a2_data: [],
         selectedOption: null
 
     }
@@ -26,8 +26,8 @@ export default class Heat_map extends Component {
         })
 
             .then(response => {
-                const the_datas = response.data.rows;
-                this.setState({ the_datas })
+                const a2_datas = response.data.rows;
+                this.setState({ a2_datas })
 
              })
             .catch(error => console.error(`Error: ${error}`))
@@ -41,15 +41,15 @@ export default class Heat_map extends Component {
         })
 
             .then(response => {
-                const the_data = response.data;
-                this.setState({ the_data })
-                console.log(the_data)
+                const a2_data = response.data;
+                this.setState({ a2_data })
+                console.log(a2_data)
 
             })
             .catch(error => console.error(`Error: ${error}`))
 
 
-        const d = Object.entries(this.state.the_data).map(([key, value]) => (
+        const d = Object.entries(this.state.a2_data).map(([key, value]) => (
             <option key={key}>{key} - {value}</option>
         ));
 
@@ -66,7 +66,7 @@ export default class Heat_map extends Component {
         const mydoc  = this.getOneDoc();
 
         const renderLineChart = (
-            <LineChart width={400} height={400} data={the_datas}>
+            <LineChart width={400} height={400} data={a2_datas}>
                 <Line type = "monotone" dataKey="uv" stroke="#8884d8" />
             </LineChart>
         );
@@ -77,7 +77,7 @@ export default class Heat_map extends Component {
             <div>
             
                 <ul id="docs">
-                    {this.state.the_datas.map((item) => 
+                    {this.state.a2_datas.map((item) => 
                         <li key={item.id}>{item.id}
                             <button onClick={() => this.getOneDoc(item.id)}>Get more info</button>
                         </li>
@@ -86,7 +86,7 @@ export default class Heat_map extends Component {
 
 
                 <select onChange={(selectedOption) => this.getOneDoc(selectedOption.target.value)}>
-                        {this.state.the_datas.map((option) => (
+                        {this.state.a2_datas.map((option) => (
                             <option key={option.id}>{option.id}</option>
                         ))}
                 </select>
