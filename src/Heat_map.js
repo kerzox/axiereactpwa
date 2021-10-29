@@ -50,19 +50,7 @@ export default class Heat_map extends Component {
             })
             .catch(error => console.error(`Error: ${error}`))
 
-
-        //const d = Object.entries(this.state.a2_data).map(([key, value]) => (
-        //  <div><li><option key={this.state.a2_data.id}>{key} - {value}</option></li></div>  
-        //));
-
-
-
-        return (
-        <div>dwadadwada</div>
-        //<div><h1>Note: the data takes a second to load</h1>{d}</div>
-        )
-
-
+            
     };
 
     render() {
@@ -70,6 +58,11 @@ export default class Heat_map extends Component {
         const mydoc  = this.getOneDoc('007eb73fd5fbfa6ac5d5cdcc5e084c38');
         console.log("dwahdoiawhdoiawhdawoidhwaoidhawiodaiwhdadioawio")
       
+
+        const d = Object.entries(this.state.a2_data).map(([key, value]) => (
+            <option key={this.state.a2_data.id}>{key} - {value}</option> 
+        ));
+
         // This will make everything visible, if it's in here it can be seen on the page
         return( 
             <div>
@@ -77,8 +70,8 @@ export default class Heat_map extends Component {
                 dwadawdwa
                 
 
-
                 {mydoc}
+                {d}
 
 
 
