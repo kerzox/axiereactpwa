@@ -32,6 +32,7 @@ export default class Heat_map extends Component {
                 this.setState({ a2_datas })
                
 
+                
              })
             .catch(error => console.error(`Error: ${error}`))
     }
