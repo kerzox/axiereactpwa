@@ -82,9 +82,15 @@ export default class Heat_map extends Component {
     render() {
         var { a2_datas, a2_data, X_Coords, Y_Coords, isLoaded } = this.state
        
-        if(this.isLoaded == false){
+        if(!isLoaded){
+            console.log('calling the function')
             this.get_all_cords();
             this.isLoaded = true;
+        }
+
+        else{
+
+            console.log('its positive')
         }
 
         // This will make everything visible, if it's in here it can be seen on the page
