@@ -30,9 +30,7 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
-               
-
-                
+            
              })
             .catch(error => console.error(`Error: ${error}`))
     }
@@ -81,17 +79,22 @@ export default class Heat_map extends Component {
         return( 
             <div>
             
+
                 <ul id="docs">
+
+
                     {this.state.a2_datas.map((item) => 
                         <li key={item.id}>{item.id}
                             <button onClick={() => this.getOneDoc(item.id)}>Get more info</button>
                         </li>
                     )}
+
+
                 </ul>
 
                 <select onChange={(selectedOption) => this.getOneDoc(selectedOption.target.value)}>
                         {this.state.a2_datas.map((option) => (
-                            <option key={option.id}>{option.id}</option>
+                            <option key={option.d}>{option.d}</option>
                         ))}
                 </select>
 
