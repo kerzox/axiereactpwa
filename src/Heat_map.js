@@ -10,8 +10,7 @@ export default class Heat_map extends Component {
         a2_data: [],
         a2_datas: [], 
         selectedOption: null,
-        xx_cord: [],
-        yy_cord: []
+        Co_ords: []
 
     }
 
@@ -39,7 +38,7 @@ export default class Heat_map extends Component {
 
     getOneDoc(docid){
 
-    // this will retrieve the headers of the contents, not the contents for each header
+        // this will retrieve the headers of the contents, not the contents for each header
         CDB.get(`/a2_data/${docid}`, {
               responseType: 'json',
         })
@@ -64,6 +63,25 @@ export default class Heat_map extends Component {
 
 
     };
+
+
+    get_co_ords(){
+        CDB.get(`/a2_data/_all_docs`, {
+            responseType: 'json',
+        })
+
+
+        .then(response => {
+            const Co_ords = response.data.rows;
+            this.setState({ Co_ords })
+            console.log(Co_ords[0].payload)
+         })
+        .catch(error => console.error(`Error: ${error}`))
+
+
+
+
+    }
 
 
     render() {
@@ -105,6 +123,8 @@ export default class Heat_map extends Component {
 
             {/* don't need html to return mydoc as there is html in the getonedoc function in the return statement*/ }
                 {mydoc}
+
+                {this.get_co_ords}
 
              {/*same case here, just rendering the linedoc of the data*/ }
 
