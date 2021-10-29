@@ -69,8 +69,8 @@ export default class Heat_map extends Component {
     get_all_cords(){
 
         console.log("retrieving coords")
-        for (var i = 0; i < 3; i++) {
-            this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
+        for (var i = 0; i < 3400; i++) {
+            this.getOneDoc(`${this.a2_datas[i].id}`)
 
         };
 
@@ -89,7 +89,8 @@ export default class Heat_map extends Component {
 
 
             <div>
-            
+            Yaddayada dwadaw
+            {/*
                 <ul id="docs">
                     {this.state.a2_datas.map((item) => 
                         <li key={item.id}>{item.id}
@@ -104,7 +105,7 @@ export default class Heat_map extends Component {
                         ))}
                 </select>
 
-              
+                        */}
 
               
               {/*}  <ul id="docs">
