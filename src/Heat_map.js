@@ -56,7 +56,7 @@ export default class Heat_map extends Component {
             <option key={key}>{key} - {value}</option>
         ));
 
-        const c = a2_datas
+        const c = this.state.a2_datas
 
 
         return (
