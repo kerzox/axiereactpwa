@@ -70,6 +70,8 @@ export default class Heat_map extends Component {
 
         const mydoc  = this.getOneDoc();
 
+       
+
        // const renderLineChart = (
         //    <LineChart width={400} height={400} data={a2_datas}>
        //         <Line type = "monotone" dataKey="uv" stroke="#8884d8" />
@@ -96,7 +98,7 @@ export default class Heat_map extends Component {
 
                 <select onChange={(selectedOption) => this.getOneDoc(selectedOption.target.value)}>
                         {this.state.a2_datas.map((option) => (
-                            <option key={option.value}>{option.value}</option>
+                            <option key={option.id}>{option.id}</option>
                             
                         ))}
                 </select>
