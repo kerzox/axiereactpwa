@@ -75,7 +75,7 @@ export default class Heat_map extends Component {
         } 
 
         console.log("all coords retrieved I hope")
-    }
+    };
 
     get_all_cords();
 
