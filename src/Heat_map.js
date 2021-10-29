@@ -56,13 +56,15 @@ export default class Heat_map extends Component {
             <option key={key}>{key} - {value}</option>
         ));
 
+        const c = a2_datas
+
 
         return (
         
         <div>
             
             <h1>the data is here</h1>
-            {a2_datas}
+            {c}
             {d}
         
         
