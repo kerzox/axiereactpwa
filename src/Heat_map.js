@@ -47,6 +47,10 @@ export default class Heat_map extends Component {
                 const a2_data = response.data;
                 this.setState({ a2_data })
                 console.log(a2_data)
+                a2_data.map(a => (
+                    <li key={a.id}>x_cord: {a.payload.x_cord} | y_cord {a.payload.y_cord}</li>
+                ))
+
             })
             .catch(error => console.error(`Error: ${error}`))
 
@@ -71,7 +75,7 @@ export default class Heat_map extends Component {
                 
 
                 {mydoc}
-                {d}
+                
 
 
 
