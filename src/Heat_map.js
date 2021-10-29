@@ -62,13 +62,7 @@ export default class Heat_map extends Component {
 
         return (
         
-        <div>
-            
-            <h1>the data is here</h1>
-            {d}
-        
-        
-        </div>)
+        <div><h1>Note: the data takes a second to load</h1>{d}</div>)
 
 
     };
@@ -96,8 +90,6 @@ export default class Heat_map extends Component {
                         </li>
                     )}
                 </ul>
-
-                <h1>render data area </h1>
 
                 <select onChange={(selectedOption) => this.getOneDoc(selectedOption.target.value)}>
                         {this.state.a2_datas.map((option) => (
