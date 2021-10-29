@@ -6,8 +6,8 @@ import { LineChart, Line } from 'recharts';
 export default class Heat_map extends Component {
 
     state = {
-        a2_datas: [], 
         a2_data: [],
+        a2_datas: [], 
         selectedOption: null
 
     }
