@@ -47,39 +47,43 @@ export default class Heat_map extends Component {
                 const a2_data = response.data;
                 this.setState({ a2_data })
                 console.log(a2_data)
-                a2_data.map(a => (
-                    <li key={a.id}>x_cord: {a.payload.x_cord} | y_cord {a.payload.y_cord}</li>
-                ))
+                
 
             })
             .catch(error => console.error(`Error: ${error}`))
 
+            const d = Object.entries(this.state.a2_data).map(([key, value]) => (
+                <option key={key}>{key} - {value}</option>
+            ));
+    
+            return (<div>{d}</div>)
+    
             
     };
 
     render() {
         var { Co_ords, a2_datas, a2_data } = this.state
         const mydoc  = this.getOneDoc('007eb73fd5fbfa6ac5d5cdcc5e084c38');
-        console.log("dwahdoiawhdoiawhdawoidhwaoidhawiodaiwhdadioawio")
       
-
-        const d = Object.entries(this.state.a2_data).map(([key, value]) => (
-            <option key={this.state.a2_data.id}>{key} - {value}</option> 
-        ));
 
         // This will make everything visible, if it's in here it can be seen on the page
         return( 
             <div>
-                
-                dwadawdwa
-                
+            
+                <ul id="docs">
+                    {this.state.a2_datas.map((item) => 
+                        <li key={item.id}>{item.id}
+                            <button onClick={() => this.getOneDoc(item.id)}>Get more info</button>
+                        </li>
+                    )}
+                </ul>
 
-                {mydoc}
-                
+                <select onChange={(selectedOption) => this.getOneDoc(selectedOption.target.value)}>
+                        {this.state.a2_datas.map((option) => (
+                            <option key={option.id}>{option.id}</option>
+                        ))}
+                </select>
 
-
-
-              
               
               {/*}  <ul id="docs">
 
