@@ -48,8 +48,8 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
-                this.X_Coords.push(this.a2_data.payload.d.x_cord)
-                this.Y_Coords.push(this.a2_data.payload.d.y_cord)
+                //this.X_Coords.push(this.a2_data.payload.d.x_cord)
+               // this.Y_Coords.push(this.a2_data.payload.d.y_cord)
 
                 
 
