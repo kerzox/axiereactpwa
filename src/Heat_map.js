@@ -65,5 +65,20 @@ getOneDoc(docid){
 
 
 
+render(){
+
+    const mydoc  = this.getOneDoc();
+
+    const renderLineChart = (
+        <LineChart width={400} height={400} data={a2_datas}>
+            <Line type = "monotone" dataKey="uv" stroke="#8884d8" />
+        </LineChart>
+    );
+
+
+// This will make everything visible, if it's in here it can be seen on the page
+  
+}   
+
 
 }
