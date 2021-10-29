@@ -65,22 +65,12 @@ export default class Heat_map extends Component {
 
     };
 
-
-    
-
     render() {
-
-        const mydoc  = this.getOneDoc();
-
-
-       // const renderLineChart = (
-        //    <LineChart width={400} height={400} data={a2_datas}>
-       //         <Line type = "monotone" dataKey="uv" stroke="#8884d8" />
-       //     </LineChart>
-      //  );
-
-        var { Co_ords } = this.state
-// This will make everything visible, if it's in here it can be seen on the page
+        var { Co_ords, a2_datas, a2_data } = this.state
+        const mydoc  = this.getOneDoc('007eb73fd5fbfa6ac5d5cdcc5e084c38');
+        
+      
+        // This will make everything visible, if it's in here it can be seen on the page
         return( 
             <div>
                 
@@ -88,7 +78,7 @@ export default class Heat_map extends Component {
                 
 
 
-
+                {mydoc}
 
 
 
@@ -118,7 +108,7 @@ export default class Heat_map extends Component {
             {/* don't need html to return mydoc as there is html in the getonedoc function in the return statement*/ }
 
 
-                {/*mydoc*/}
+            
 
 
 
