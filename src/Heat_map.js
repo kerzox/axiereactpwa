@@ -18,7 +18,7 @@ export default class Heat_map extends Component {
     componentDidMount(){
         this.getAllDocuments();
         console.log("getting all docs")
-    }
+    } 
 
 // retrieves items from the database
     getAllDocuments(){
@@ -59,13 +59,14 @@ export default class Heat_map extends Component {
 
         return (
         
-        <div><h1>Note: the data takes a second to load</h1>{d.payload}</div>)
+        <div><h1>Note: the data takes a second to load</h1>{d}</div>
+        )
 
 
     };
 
 
-   
+    
 
     render() {
 
@@ -78,13 +79,22 @@ export default class Heat_map extends Component {
        //     </LineChart>
       //  );
 
-
+        var { Co_ords } = this.state
 // This will make everything visible, if it's in here it can be seen on the page
         return( 
             <div>
-            
+                
+                dwadawdwa
+                
 
-                <ul id="docs">
+
+
+
+
+
+              
+              
+              {/*}  <ul id="docs">
 
 
                     {this.state.a2_datas.map((item) => 
@@ -97,15 +107,18 @@ export default class Heat_map extends Component {
                 </ul>
 
                 <select onChange={(selectedOption) => this.getOneDoc(selectedOption.target.value)}>
-                        <h1>{selectedOption.target.value}</h1>
                         {this.state.a2_datas.map((option) => (
                             <option key={option.id}>{option.id}</option>
                             
                         ))}
                 </select>
 
+                        */}
+
             {/* don't need html to return mydoc as there is html in the getonedoc function in the return statement*/ }
-                {mydoc}
+
+
+                {/*mydoc*/}
 
 
 
