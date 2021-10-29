@@ -70,7 +70,7 @@ export default class Heat_map extends Component {
 
         console.log("retrieving coords")
         for (var i = 0; i < 34565; i++) {
-            this.getOneDoc(a2_datas[i].id)
+            this.getOneDoc(this.a2_datas[i].id)
 
         };
 
@@ -79,7 +79,7 @@ export default class Heat_map extends Component {
 
 
     render() {
-        var { Co_ords, a2_datas, a2_data } = this.state
+        var { a2_datas, a2_data, X_Coords, Y_Coords } = this.state
         const retrievecords = this.getOneDoc();
 
         // This will make everything visible, if it's in here it can be seen on the page
