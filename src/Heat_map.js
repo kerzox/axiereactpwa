@@ -68,7 +68,7 @@ export default class Heat_map extends Component {
     render() {
         var { Co_ords, a2_datas, a2_data } = this.state
         const mydoc  = this.getOneDoc('007eb73fd5fbfa6ac5d5cdcc5e084c38');
-        
+        console.log("dwahdoiawhdoiawhdawoidhwaoidhawiodaiwhdadioawio")
       
         // This will make everything visible, if it's in here it can be seen on the page
         return( 
