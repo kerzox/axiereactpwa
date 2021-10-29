@@ -58,8 +58,8 @@ export default class Heat_map extends Component {
 
 
         return (
-        
-        <div><h1>Note: the data takes a second to load</h1>{d}</div>
+        <div>dwadadwada</div>
+        //<div><h1>Note: the data takes a second to load</h1>{d}</div>
         )
 
 
