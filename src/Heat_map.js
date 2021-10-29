@@ -79,6 +79,11 @@ export default class Heat_map extends Component {
         .catch(error => console.error(`Error: ${error}`))
 
 
+         return(
+
+
+            <div>{Co_ords}</div>
+         )
 
 
     }
