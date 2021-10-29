@@ -30,9 +30,7 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
-                console.log(a2_datas)
-                console.log('the rows', response.data.rows)
-                
+               
 
              })
             .catch(error => console.error(`Error: ${error}`))
