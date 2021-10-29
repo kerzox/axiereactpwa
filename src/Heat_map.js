@@ -11,8 +11,9 @@ export default class Heat_map extends Component {
         a2_datas: [], 
         selectedOption: null,
         X_Coords: [],
-        Y_Coords: []
+        Y_Coords: [],
 
+        isLoaded: false
 
     }
 
@@ -80,8 +81,11 @@ export default class Heat_map extends Component {
 
     render() {
         var { a2_datas, a2_data, X_Coords, Y_Coords } = this.state
-        this.get_all_cords();
-
+       
+        if(isLoaded == false){
+            this.get_all_cords();
+            isLoaded = true;
+        }
 
         // This will make everything visible, if it's in here it can be seen on the page
         return( 
