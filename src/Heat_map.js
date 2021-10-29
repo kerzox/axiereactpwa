@@ -16,6 +16,7 @@ export default class Heat_map extends Component {
 // this function runs each time the page is loaded, runs the function below
     componentDidMount(){
         this.getAllDocuments();
+        console.log("getting all docs")
     }
 
 // retrieves items from the database
@@ -31,6 +32,7 @@ export default class Heat_map extends Component {
                 this.setState({ a2_datas })
                 console.log(a2_datas)
                 console.log('the rows', response.data.rows)
+                
 
              })
             .catch(error => console.error(`Error: ${error}`))
@@ -56,7 +58,6 @@ export default class Heat_map extends Component {
             <option key={key}>{key} - {value}</option>
         ));
 
-        const c = this.state.a2_datas
 
 
         return (
@@ -64,7 +65,6 @@ export default class Heat_map extends Component {
         <div>
             
             <h1>the data is here</h1>
-            {c}
             {d}
         
         
@@ -74,9 +74,6 @@ export default class Heat_map extends Component {
     };
 
 
-    
-
-    
     render() {
 
         const mydoc  = this.getOneDoc();
@@ -100,6 +97,7 @@ export default class Heat_map extends Component {
                     )}
                 </ul>
 
+                <h1>render data area </h1>
 
                 <select onChange={(selectedOption) => this.getOneDoc(selectedOption.target.value)}>
                         {this.state.a2_datas.map((option) => (
