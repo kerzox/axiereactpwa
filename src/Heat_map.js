@@ -5,23 +5,22 @@ import { LineChart, Line } from 'recharts';
 
 export default class Heat_map extends Component {
 
-    constructor(props){
-        super(props)
-        this.state = {
-         a2_data: [],
-         a2_datas: [], 
-         selectedOption: null,
-         X_Coords: [],
-         Y_Coords: [],
-         isLoaded: false
-        }
+
+    state = {
+        a2_data: [],
+        a2_datas: [], 
+        selectedOption: null,
+        X_Coords: [],
+        Y_Coords: [],
+        isLoaded: false
     }
+    
 
 // this function runs each time the page is loaded, runs the function below
     componentDidMount(){
 
         // function that runs all doc names then gets the coords with each doc
-        this.get_all_cords();
+        this.getAllDocuments();
     } 
 
 // retrieves items from the database
@@ -37,7 +36,14 @@ export default class Heat_map extends Component {
                 this.setState({ a2_datas })
                 console.log("the data", a2_datas[0])
 
-                
+                CDB.get(`/a2_data/${docid}`, {
+                    responseType: 'json',
+                })
+
+                for (var i = 0; i < 3; i++) {
+                    this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
+                    console.log('run retrieval')
+                };
 
 
              })
@@ -57,7 +63,7 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
-                
+                console.log("got one doc")
 
 
                 //this.X_Coords.push(this.a2_data.payload.d.x_cord)
@@ -78,6 +84,8 @@ export default class Heat_map extends Component {
     };
 
    // ${this.a2_datas[i].id}
+
+   /*
     get_all_cords = () => {
 
         console.log("get all logs")
@@ -89,6 +97,8 @@ export default class Heat_map extends Component {
 
         console.log("retrieving coords")
         console.log("a variable ", this.state.a2_datas[0])
+
+
         //console.log(this.a2_datas.length)
         for (var i = 0; i < 3; i++) {
             this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
@@ -98,7 +108,7 @@ export default class Heat_map extends Component {
         console.log("all coords retrieved I hope")
     };
 
-
+    */
     
 
 
