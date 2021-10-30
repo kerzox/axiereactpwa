@@ -36,17 +36,17 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
-                console.log("the data", a2_datas[0])
-                console.log("the data", a2_datas[1])
-                console.log("the data", a2_datas[2])
-                console.log("the data", a2_datas[3000])
+                //console.log("the data", a2_datas[0])
+                //console.log("the data", a2_datas[1])
+                //console.log("the data", a2_datas[2])
+                //console.log("the data", a2_datas[3000])
 
-                //for (var i = 0; i < 25; i++) {
-                  //  var xwda = a2_datas[i].id
+                for (var i = 0; i < 25; i++) {
+                    var xwda = a2_datas[i].id
                  //   this.getOneDoc(`${xwda}`)
-                 //   //console.log("the id ", `${xwda}`)
+                    console.log("the id ", `${xwda}`)
                 //    console.log('run retrieval')
-                //};
+                };
 
 
              })
