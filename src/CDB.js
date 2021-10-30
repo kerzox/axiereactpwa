@@ -19,6 +19,7 @@ export default axios.create({
          "Access-Control-Allow-Origin": "https://ai.qutproject.com",
          "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
          "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
+         "*":`${cors()}`
     }
 
 
