@@ -18,9 +18,9 @@ export default class Heat_map extends Component {
 
 // this function runs each time the page is loaded, runs the function below
     componentDidMount(){
-        this.getAllDocuments();
+
+        // function that runs all doc names then gets the coords with each doc
         this.get_all_cords();
-        console.log("getting all docs")
     } 
 
 // retrieves items from the database
@@ -77,6 +77,9 @@ export default class Heat_map extends Component {
    // ${this.a2_datas[i].id}
     get_all_cords = () => {
 
+        console.log("get all logs")
+        this.getAllDocuments();
+        console.log("finished getting all logs")
         console.log("retrieving coords")
         console.log(this.state.a2_datas[0])
         //console.log(this.a2_datas.length)
