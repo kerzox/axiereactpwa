@@ -15,5 +15,6 @@ export default axios.create({
     baseURL: `${cloudantDBURL}`,
     headers: {
         'Authorization': `Basic ${authKeyEncode}`,
+        "Access-Control-Allow-Origin": "*",
     }
 });
