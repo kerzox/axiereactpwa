@@ -71,7 +71,7 @@ export default class Heat_map extends Component {
 
         console.log("retrieving coords")
 
-        console.log(a2_datas.length)
+        console.log(this.a2_datas.length)
         for (var i = 0; i < 3; i++) {
             this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
             
