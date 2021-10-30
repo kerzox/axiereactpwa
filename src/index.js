@@ -15,7 +15,7 @@ import reportWebVitals from './reportWebVitals';
 //}
 //app.use(cors(corsOptions));
 
-cors = reqquire("cors");
+cors = require("cors");
 
 const app = express();
 app.use("*", cors());
