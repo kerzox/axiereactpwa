@@ -3,7 +3,11 @@ import CDB from './CDB';
 import { LineChart, Line } from 'recharts';
 
 
+const dummyx = [1,3,2,1,3,5,4,3,1,2,3,1,2,3,4,1]
+const dummyy = [1,3,4,3,5,4,2,3,4,4,1,4,3,4,5,2 ]
+
 export default class Heat_map extends Component {
+
 
 
     state = {
@@ -135,6 +139,9 @@ export default class Heat_map extends Component {
 
             <div>
             Yaddayada dwadaw
+
+            {dummyx}
+            {dummyy}
             {/*
                 <ul id="docs">
                     {this.state.a2_datas.map((item) => 
