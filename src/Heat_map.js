@@ -79,20 +79,29 @@ export default class Heat_map extends Component {
     };
 
 
+    test_func(){
+
+        console.log("this function has run")
+    }
+
+
     render() {
         var { a2_datas, a2_data, X_Coords, Y_Coords, isLoaded } = this.state
        
-        if(!isLoaded){
-            console.log('calling the function')
-            this.get_all_cords();
-            this.isLoaded = true;
-        }
+       // if(!isLoaded){
+       //     console.log('calling the function')
+        //    this.get_all_cords();
+        //    this.isLoaded = true;
+       // }
 
-        else{
+        //else{
+//
+        //    console.log('its positive')
+       // }
 
-            console.log('its positive')
-        }
 
+
+       this.test_func();
         // This will make everything visible, if it's in here it can be seen on the page
         return( 
 
