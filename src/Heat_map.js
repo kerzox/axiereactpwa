@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CDB from './CDB';
 import { LineChart, Line } from 'recharts';
+import Chart from 'react-apexcharts'
 
 
 const dummyx = [1,3,2,1,3,5,4,3,1,2,3,1,2,3,4,1]
@@ -16,7 +17,31 @@ export default class Heat_map extends Component {
         selectedOption: null,
         X_Coords: [],
         Y_Coords: [],
-        isLoaded: false
+        isLoaded: false,
+
+        options: {
+            chart: {
+              height: 350,
+              type: 'heatmap',
+            },
+            dataLabels: {
+              enabled: false
+            },
+            colors: ["#008FFB"],
+            title: {
+              text: 'HeatMap Chart (Single color)'
+            },
+          },
+
+
+        series: [{
+            name: 'X_data',
+            data: dummyx
+          },
+          {
+            name: 'Y_data',
+            data: dummyy
+        }],
     }
     
 
@@ -142,6 +167,10 @@ export default class Heat_map extends Component {
 
             {dummyx}
             {dummyy}
+
+            <div id="chart">
+            <ReactApexChart options={this.state.options} series={this.state.series} type="heatmap" height={350} />
+            </div>
             {/*
                 <ul id="docs">
                     {this.state.a2_datas.map((item) => 
@@ -215,3 +244,5 @@ plt.show()*/}
         )
     }     
 }
+
+
