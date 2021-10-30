@@ -6,7 +6,7 @@ import Chart from 'react-apexcharts'
 
 const dummyx = [1,3,2,1,3,5,4,3,1,2,3,1,2,3,4,1]
 const dummyy = [1,3,4,3,5,4,2,3,4,4,1,4,3,4,5,2 ]
-
+const te = [[1,3],[3,3],[4,3],[2,5],[3,3],[1,1],[3,2],[4,5],[3,1],[3,4]]
 export default class Heat_map extends Component {
 
 
@@ -36,12 +36,13 @@ export default class Heat_map extends Component {
 
         series: [{
             name: 'X_data',
-            data: dummyx
+            data: te
           },
-          {
-            name: 'Y_data',
-            data: dummyy
-        }],
+          //{
+           // name: 'Y_data',
+         //   data: dummyy
+       // }
+    ],
     }
     
 
