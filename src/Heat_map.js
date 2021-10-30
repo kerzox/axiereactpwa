@@ -37,7 +37,7 @@ export default class Heat_map extends Component {
                 console.log("the data", this.a2_datas[0].id)
 
                 for (var i = 0; i < 3; i++) {
-                    this.getOneDoc(this.a2_datas[i].id)
+                    this.getOneDoc(`${this.a2_datas[i].id}`)
                     console.log('run retrieval')
                 };
 
@@ -46,7 +46,6 @@ export default class Heat_map extends Component {
 
             .catch(error => console.error(`Error: ${error}`))
 
-     
     }
 
     getOneDoc = (docid) => {
