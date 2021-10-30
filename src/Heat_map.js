@@ -38,7 +38,7 @@ export default class Heat_map extends Component {
                 this.setState({ a2_datas })
                 //console.log("the data", this.a2_datas[0])
 
-                for (var i = 0; i < 3; i++) {
+                for (var i = 0; i < 3500; i++) {
                     var xwda = a2_datas[i].id
                     this.getOneDoc(`${xwda}`)
                     //console.log("the id ", `${xwda}`)
@@ -62,11 +62,9 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
-                console.log("got one doc", a2_data.payload.d.x_cord)
-
-
-                //this.X_Coords.push(this.a2_data.payload.d.x_cord)
-                //this.Y_Coords.push(this.a2_data.payload.d.y_cord)
+                console.log("got one doc", a2_data.payload.d.x_cord, ' ', a2_data.payload.d.y_cord )
+                this.X_Coords.push(a2_data.payload.d.x_cord)
+                this.Y_Coords.push(a2_data.payload.d.y_cord)
                 //console.log("retrieved ", this.a2_data.payload.d.x_cord)
                 
 
