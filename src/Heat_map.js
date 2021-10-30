@@ -34,7 +34,7 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
-                console.log(this.a2_datas)
+                console.log(a2_datas)
              })
 
             .catch(error => console.error(`Error: ${error}`))
@@ -52,7 +52,7 @@ export default class Heat_map extends Component {
                 this.setState({ a2_data })
                 //this.X_Coords.push(this.a2_data.payload.d.x_cord)
                // this.Y_Coords.push(this.a2_data.payload.d.y_cord)
-                console.log("retrieved ", this.a2_data.payload.d.x_cord)
+                //console.log("retrieved ", this.a2_data.payload.d.x_cord)
                 
 
             })
