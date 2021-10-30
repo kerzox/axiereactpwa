@@ -169,7 +169,7 @@ export default class Heat_map extends Component {
             {dummyy}
 
             <div id="chart">
-            <ReactApexChart options={this.state.options} series={this.state.series} type="heatmap" height={350} />
+            <Chart options={this.state.options} series={this.state.series} type="heatmap" height={350} />
             </div>
             {/*
                 <ul id="docs">
