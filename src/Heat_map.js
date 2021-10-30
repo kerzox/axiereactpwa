@@ -24,7 +24,7 @@ export default class Heat_map extends Component {
     } 
 
 // retrieves items from the database
-    getAllDocuments = () =>{
+    getAllDocuments = (_callback) =>{
 
      // this will retrieve the headers of the contents, not the contents for each header
         CDB.get(`/a2_data/_all_docs`, {
@@ -42,6 +42,8 @@ export default class Heat_map extends Component {
              })
 
             .catch(error => console.error(`Error: ${error}`))
+
+     _callback();
     }
 
     getOneDoc = (docid) => {
@@ -80,8 +82,10 @@ export default class Heat_map extends Component {
         console.log("get all logs")
         this.getAllDocuments();
         console.log("finished getting all logs")
+
+
         console.log("retrieving coords")
-        console.log(this.state.a2_datas[0])
+        console.log("a variable ", this.state.a2_datas[0])
         //console.log(this.a2_datas.length)
         for (var i = 0; i < 3; i++) {
             this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
