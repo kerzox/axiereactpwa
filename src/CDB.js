@@ -19,7 +19,6 @@ export default axios.create({
          "Access-Control-Allow-Origin": "https://ai.qutproject.com",
          "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
          "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
-         "https://c6b339ee-b547-4f06-a6f7-cf0c9abec3b2-bluemix.cloudantnosqldb.appdomain.cloud/a2_data/_all_docs": "200 OK"
     }
 
 
