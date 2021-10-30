@@ -7,13 +7,13 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 
-const cors = require('cors');
-const corsOptions ={
-    origin:'https://ai.qutproject.com', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
-app.use(cors(corsOptions));
+//const cors = require('cors');
+//const corsOptions ={
+  //  origin:'https://ai.qutproject.com', 
+   // credentials:true,            //access-control-allow-credentials:true
+   // optionSuccessStatus:200
+//}
+//app.use(cors(corsOptions));
 
 
 //var cors = require('cors')
