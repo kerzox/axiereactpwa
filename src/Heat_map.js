@@ -14,7 +14,6 @@ export default class Heat_map extends Component {
         Y_Coords: [],
 
         isLoaded: false
-
     }
 
 // this function runs each time the page is loaded, runs the function below
@@ -25,7 +24,7 @@ export default class Heat_map extends Component {
     } 
 
 // retrieves items from the database
-    getAllDocuments(){
+    getAllDocuments = () =>{
 
      // this will retrieve the headers of the contents, not the contents for each header
         CDB.get(`/a2_data/_all_docs`, {
@@ -36,12 +35,13 @@ export default class Heat_map extends Component {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
                 //console.log(a2_datas)
+
              })
 
             .catch(error => console.error(`Error: ${error}`))
     }
 
-    getOneDoc(docid){
+    getOneDoc = (docid) => {
 
         // this will retrieve the headers of the contents, not the contents for each header
         CDB.get(`/a2_data/${docid}`, {
@@ -51,8 +51,9 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
+
                 //this.X_Coords.push(this.a2_data.payload.d.x_cord)
-               // this.Y_Coords.push(this.a2_data.payload.d.y_cord)
+                //this.Y_Coords.push(this.a2_data.payload.d.y_cord)
                 //console.log("retrieved ", this.a2_data.payload.d.x_cord)
                 
 
@@ -69,7 +70,7 @@ export default class Heat_map extends Component {
     };
 
    // ${this.a2_datas[i].id}
-    get_all_cords(){
+    get_all_cords = () => {
 
         console.log("retrieving coords")
         console.log(this.state.a2_datas[0])
