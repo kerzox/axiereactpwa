@@ -41,7 +41,7 @@ export default class Heat_map extends Component {
                 for (var i = 0; i < 3; i++) {
                     var xwda = a2_datas[i].id
                     //this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
-                    console.log("the id ", xwda)
+                    console.log("the id ", `${xwda}`)
                     console.log('run retrieval')
                 };
 
