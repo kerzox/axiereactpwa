@@ -15,10 +15,6 @@ import reportWebVitals from './reportWebVitals';
 //}
 //app.use(cors(corsOptions));
 
-cors = require("cors");
-
-const app = express();
-app.use("*", cors());
 //var cors = require('cors')
 //app.use(cors()) // Use this after the variable declaration
 

@@ -16,11 +16,13 @@ export default axios.create({
     baseURL: `${cloudantDBURL}`,
     headers: {
         'Authorization': `Basic ${authKeyEncode}`,
-         "Access-Control-Allow-Origin": "https://ai.qutproject.com",
+         "Access-Control-Allow-Origin": "*",
          "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
          "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
-         "*":`${cors()}`
+       
     }
 
 
 });
+
+//"*":`${cors()}`
