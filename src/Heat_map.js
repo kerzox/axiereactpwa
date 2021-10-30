@@ -39,7 +39,7 @@ export default class Heat_map extends Component {
                 console.log("the data", a2_datas[0])
                 console.log("the data", a2_datas[1])
                 console.log("the data", a2_datas[2])
-                console.log("the data", a2_datas[25])
+                console.log("the data", a2_datas[3000])
 
                 //for (var i = 0; i < 25; i++) {
                   //  var xwda = a2_datas[i].id
