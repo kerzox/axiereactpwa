@@ -17,5 +17,7 @@ export default axios.create({
     headers: {
         'Authorization': `Basic ${authKeyEncode}`,
          "Access-Control-Allow-Origin": "https://ai.qutproject.com",
+         "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
+         "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, X-Requested-With"
     }
 });
