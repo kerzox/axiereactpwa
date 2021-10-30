@@ -5,15 +5,16 @@ import { LineChart, Line } from 'recharts';
 
 export default class Heat_map extends Component {
 
-    
-    state = {
-        a2_data: [],
-        a2_datas: [], 
-        selectedOption: null,
-        X_Coords: [],
-        Y_Coords: [],
-
-        isLoaded: false
+    constructor(props){
+        super(props)
+        this.state = {
+         a2_data: [],
+         a2_datas: [], 
+         selectedOption: null,
+         X_Coords: [],
+         Y_Coords: [],
+         isLoaded: false
+        }
     }
 
 // this function runs each time the page is loaded, runs the function below
@@ -34,7 +35,7 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
-                console.log("tje data", a2_datas[0])
+                console.log("the data", a2_datas[0])
 
                 
 
