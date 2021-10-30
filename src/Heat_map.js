@@ -34,7 +34,7 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
-                console.log("the data", this.a2_datas[0].id)
+                console.log("the data", this.a2_datas[0])
 
                 for (var i = 0; i < 3; i++) {
                     this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
