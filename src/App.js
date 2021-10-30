@@ -12,6 +12,9 @@ import Bars from "./Bars";
 import Seyed from "./Seyed";
 
 
+//var cors = require('cors')
+//app.use(cors()) // Use this after the variable declaration
+
 function App() {
   
   
