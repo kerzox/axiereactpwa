@@ -34,7 +34,7 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
-                //console.log(a2_datas)
+                console.log(a2_datas[0])
 
              })
 
@@ -51,6 +51,7 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
+                
 
                 //this.X_Coords.push(this.a2_data.payload.d.x_cord)
                 //this.Y_Coords.push(this.a2_data.payload.d.y_cord)
@@ -73,7 +74,7 @@ export default class Heat_map extends Component {
     get_all_cords = () => {
 
         console.log("retrieving coords")
-        console.log(this.state.a2_datas[0])
+        console.log(state.a2_datas[0])
         //console.log(this.a2_datas.length)
         for (var i = 0; i < 3; i++) {
             this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
