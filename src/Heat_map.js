@@ -20,12 +20,14 @@ export default class Heat_map extends Component {
     componentDidMount(){
 
         // function that runs all doc names then gets the coords with each doc
+        console.log("before getting all docs")
         this.getAllDocuments();
     } 
 
 // retrieves items from the database
     getAllDocuments = () =>{
 
+        console.log("getting all docs now ")
      // this will retrieve the headers of the contents, not the contents for each header
         CDB.get(`/a2_data/_all_docs`, {
             responseType: 'json',
@@ -34,7 +36,7 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
-                console.log("the data", this.a2_datas[0])
+                //console.log("the data", this.a2_datas[0])
 
                 for (var i = 0; i < 3; i++) {
                     this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
