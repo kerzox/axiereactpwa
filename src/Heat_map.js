@@ -51,7 +51,7 @@ export default class Heat_map extends Component {
                 this.setState({ a2_data })
                 //this.X_Coords.push(this.a2_data.payload.d.x_cord)
                // this.Y_Coords.push(this.a2_data.payload.d.y_cord)
-
+                console.log("retrieved ", this.a2_data.payload.d.x_cord)
                 
 
             })
@@ -71,7 +71,7 @@ export default class Heat_map extends Component {
 
         console.log("retrieving coords")
         for (var i = 0; i < 3400; i++) {
-            this.getOneDoc("007eb73fd5fbfa6ac5d5cdcc5e03d90c")
+            this.getOneDoc(`${this.a2_datas[i].id}`)
             
         };
 
@@ -79,10 +79,7 @@ export default class Heat_map extends Component {
     };
 
 
-    test_func(){
-
-        console.log("this function has run")
-    }
+    
 
 
     render() {
@@ -99,9 +96,9 @@ export default class Heat_map extends Component {
         //    console.log('its positive')
        // }
 
+       this.get_all_cords();
 
 
-       this.test_func();
         // This will make everything visible, if it's in here it can be seen on the page
         return( 
 
