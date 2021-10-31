@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CDB from './CDB';
 import { LineChart, Line } from 'recharts';
 import Chart from 'react-apexcharts'
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
 
 
 const dummyx = [1,3,2,1,3,5,4,3,1,2,3,1,2,3,4,1]
@@ -18,6 +19,7 @@ export default class Heat_map extends Component {
         X_Coords: [],
         Y_Coords: [],
         isLoaded: false,
+
 
         options: {
             chart: {
@@ -38,12 +40,14 @@ export default class Heat_map extends Component {
             name: 'X_data',
             data: te
           },
-          //{
-           // name: 'Y_data',
-         //   data: dummyy
-       // }
+          {
+            name: 'Y_data',
+            data: dummyy
+        }
     ],
     }
+
+
     
 
 // this function runs each time the page is loaded, runs the function below
@@ -172,6 +176,21 @@ export default class Heat_map extends Component {
             <div id="chart">
             <Chart options={this.state.options} series={this.state.series} type="heatmap" height={350} />
             </div>
+
+
+            <XYPlot
+                width={300}
+                 height={300}>
+                <XAxis />
+                <YAxis />
+                <HeatmapSeries
+                 className="heatmap-series-example"
+                data={[
+                    {x: 1, y: 0, color: "#f00"},
+                    {x: 1, y: 5, color: "#f00"},
+                    {x: 1, y: 10, color: "#0f0"}
+                  ]}/>
+            </XYPlot>
             {/*
                 <ul id="docs">
                     {this.state.a2_datas.map((item) => 
