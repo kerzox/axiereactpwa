@@ -185,7 +185,7 @@ export default class Heat_map extends Component {
                 <YAxis />
                 <HeatmapSeries
                 className="heatmap-series-example"
-                colorRange={["red", "blue"]}
+               // colorRange={["red", "blue"]}
                 data={[
                     {x: dummyx[0], y: dummyy[0]},
                     {x: dummyx[1], y: dummyy[1]},
