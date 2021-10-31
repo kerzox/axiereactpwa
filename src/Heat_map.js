@@ -187,12 +187,14 @@ export default class Heat_map extends Component {
                 className="heatmap-series-example"
                 colorRange={["red", "blue"]}
                 data={[
-                    {x: 1, y: 0},
-                    {x: 1, y: 5},
-                    {x: 1, y: 5},
-                    {x: 3, y: 2},
-                    {x: 4, y: 3},
-                    {x: 4, y: 3},
+                 //   {x: 1, y: 0},
+                 //   {x: 1, y: 5},
+                 //   {x: 1, y: 5},
+                 //   {x: 3, y: 2},
+                 //   {x: 4, y: 3},
+                 //   {x: 4, y: 3},
+                    {te}
+
                   ]}/>
             </XYPlot>
             {/*
