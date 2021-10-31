@@ -15,14 +15,14 @@ const authKeyEncode = encode(`${username}:${password}`)
 export default axios.create({
     baseURL: `${cloudantDBURL}`,
     headers: {
-        //'Authorization': `Basic ${authKeyEncode}`,
+        'Authorization': `Basic ${authKeyEncode}`,
         "Access-Control-Allow-Origin": "*"
          //"Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
          //"Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
        
     },
 
-    auth: {username: `${username}`, password: `${password}`}
+    //auth: {username: `${username}`, password: `${password}`}
 
 
 
