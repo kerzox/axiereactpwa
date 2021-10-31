@@ -79,6 +79,7 @@ export default class Heat_map extends Component {
                 for (var i = 0; i < 25; i++) {
                     var xwda = a2_datas[i].id
                     this.getOneDoc(`${xwda}`)
+                    setTimeout(function(){},1000)
                     //console.log("the id ", `${xwda}`)
                 //    console.log('run retrieval')
                 };
@@ -170,8 +171,7 @@ export default class Heat_map extends Component {
             <div>
             Yaddayada dwadaw
 
-            {dummyx}
-            {dummyy}
+      
 
             <div id="chart">
             <Chart options={this.state.options} series={this.state.series} type="heatmap" height={350} />
@@ -183,7 +183,7 @@ export default class Heat_map extends Component {
                  height={300}>
                 <XAxis />
                 <YAxis />
-                <MarkSeries
+                <HeatmapSeries
                 className="heatmap-series-example"
                 data={[
                     {x: dummyx[0], y: dummyy[0]},
