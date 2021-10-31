@@ -86,49 +86,38 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
-                //console.log(a2_datas)
 
 
-                /*
-                var docks = []
+
+                var dat = []
+                    for(var item in a2_datas){
+                    dat.push({ id: a2_datas[item].id }) //might need to add rev in here too if exists
+                 }
+                CDB.post({
+                    url: "https://c6b339ee-b547-4f06-a6f7-cf0c9abec3b2-bluemix.cloudantnosqldb.appdomain.cloud/a2_data/_bulk_get",
                     
-                for (var d in a2_datas) { 
-                    docks.push({"id":d.id})
-                }
+                    all_d : { "docs" : dat}
+                 })
 
-                var docs = {"docs": docks}
-
-                console.log(docks)
-
-                CDB.post(`/a2_data/_bulk_get`, {
-                    responseType: 'json',
-                    docs
-                    
-
-                    
-                })
 
 
                     .then(response => {
+                        console.log(response.results)
 
-                        console.log(response)
 
                     })
 
-                    */
-                //console.log("the data", a2_datas[0])
-                //console.log("the data", a2_datas[1])
-                //console.log("the data", a2_datas[2])
-                //console.log("the data", a2_datas[3000])
+
+
 
                 
-                for (var i = 0; i < 20; i++) {
-                    var xwda = a2_datas[i].id
-                    this.getOneDoc(`${xwda}`)
-                    //setTimeout(function(){},1000)
-                    console.log("the id ", `${xwda}`)
-                    console.log('run retrieval')
-                };
+             ///   for (var i = 0; i < 20; i++) {
+            //        var xwda = a2_datas[i].id
+              //      this.getOneDoc(`${xwda}`)
+              //      //setTimeout(function(){},1000)
+              //      console.log("the id ", `${xwda}`)
+              //      console.log('run retrieval')
+              //  };
 
            
 
