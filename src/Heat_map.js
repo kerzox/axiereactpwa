@@ -21,8 +21,8 @@ export default class Heat_map extends Component {
         a2_data: [],
         a2_datas: [], 
         selectedOption: null,
-        X_Coords: [],
-        Y_Coords: [],
+        X_Coords: any = [],
+        Y_Coords: any = [],
 
 
     }
@@ -189,7 +189,7 @@ export default class Heat_map extends Component {
 
             {//This following code makes it possible to make a heatmap 
             
-            },
+            }
 
 
             <ScriptTag isHydrating={true} type="text/javascript" src= "https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js" />
