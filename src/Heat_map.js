@@ -86,14 +86,11 @@ export default class Heat_map extends Component {
 
 */
 
-
-                
                 for (var i = 0; i < 20; i++) {
                     var xwda = a2_datas[i].id
                     this.getOneDoc(`${xwda}`)
 
-                    console.log("the id ", `${xwda}`)
-                    console.log('run retrieval')
+                  
                 };
 
            
@@ -120,11 +117,10 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
-                console.log("got one doc", a2_data.payload.d.x_cord, ' ', a2_data.payload.d.y_cord )
-               // this.X_Coords.push(a2_data.payload.d.x_cord)
-                //this.Y_Coords.push(a2_data.payload.d.y_cord)
-                //console.log("retrieved ", this.a2_data.payload.d.x_cord)
-                
+                this.X_Coords.push(a2_data.payload.d.x_cord)
+                this.Y_Coords.push(a2_data.payload.d.y_cord)
+                console.log("got one doc", this.X_Coords, ' ', this.Y_Coords )
+
 
             })
             .catch(error => console.error(`Error: ${error}`))
@@ -189,7 +185,12 @@ export default class Heat_map extends Component {
 
            
             <div>
-            Yaddayada dwadaw
+            <h1>Heatmap of room</h1>
+
+            {//This following code makes it possible to make a heatmap 
+            
+            },
+
 
             <ScriptTag isHydrating={true} type="text/javascript" src= "https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js" />
             <ScriptTag isHydrating={true} type="text/javascript" src= "https://cdn.anychart.com/releases/8.7.1/js/anychart-heatmap.min.js" />
