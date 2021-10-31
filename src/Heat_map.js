@@ -65,25 +65,25 @@ export default class Heat_map extends Component {
     getAllDocuments = () =>{
 
 
-        const response = await CDB.get({
-            url: "https://c6b339ee-b547-4f06-a6f7-cf0c9abec3b2-bluemix.cloudantnosqldb.appdomain.cloud/a2_data/_all_docs"
-        });
+       // const response = await CDB.get({
+       //     url: "https://c6b339ee-b547-4f06-a6f7-cf0c9abec3b2-bluemix.cloudantnosqldb.appdomain.cloud/a2_data/_all_docs"
+      //  });
 
-        let a2_datas = response.data.rows;
-        this.setState({ a2_datas })
-        console.log(a2_datas)
+      //  let a2_datas = response.data.rows;
+      //  this.setState({ a2_datas })
+      //  console.log(a2_datas)
 
 
         console.log("getting all docs now ")
      // this will retrieve the headers of the contents, not the contents for each header
-        //CDB.get(`/a2_data/_all_docs`, {
-          //  responseType: 'json',
-       // })
+        CDB.get("https://c6b339ee-b547-4f06-a6f7-cf0c9abec3b2-bluemix.cloudantnosqldb.appdomain.cloud/a2_data/_all_docs"), {
+            responseType: 'json',
+        }
 
-        //    .then(response => {
-        //        const a2_datas = response.data.rows;
-         //       this.setState({ a2_datas })
-        //        console.log(a2_datas)
+            .then(response => {
+                const a2_datas = response.data.rows;
+                this.setState({ a2_datas })
+                console.log(a2_datas)
 
 
                 /*
@@ -129,9 +129,9 @@ export default class Heat_map extends Component {
 
              */
 
-            // })
+             })
 
-          //  .catch(error => console.error(`Error: ${error}`))
+            .catch(error => console.error(`Error: ${error}`))
 
     }
 
