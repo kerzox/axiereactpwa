@@ -76,9 +76,9 @@ export default class Heat_map extends Component {
 
         console.log("getting all docs now ")
      // this will retrieve the headers of the contents, not the contents for each header
-        CDB.get("https://c6b339ee-b547-4f06-a6f7-cf0c9abec3b2-bluemix.cloudantnosqldb.appdomain.cloud/a2_data/_all_docs"), {
+        CDB.get(`https://c6b339ee-b547-4f06-a6f7-cf0c9abec3b2-bluemix.cloudantnosqldb.appdomain.cloud/a2_data/_all_docs`, {
             responseType: 'json',
-        }
+        })
 
             .then(response => {
                 const a2_datas = response.data.rows;
