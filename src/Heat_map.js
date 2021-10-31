@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CDB from './CDB';
 import { LineChart, Line } from 'recharts';
 import Chart from 'react-apexcharts'
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, HeatmapSeries} from 'react-vis';
 
 
 const dummyx = [1,3,2,1,3,5,4,3,1,2,3,1,2,3,4,1]
