@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CDB from './CDB';
 import { LineChart, Line } from 'recharts';
 import Chart from 'react-apexcharts'
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, HeatmapSeries} from 'react-vis';
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, HeatmapSeries, MarkSeries} from 'react-vis';
 
 
 const dummyx = [1,3,2,1,3,5,4,3,1,2,3,1,2,3,4,1,3,2,4,2,1,3,5,4,3,1,3,4,5,5,1,3,4,1,2,3,1]
@@ -183,11 +183,10 @@ export default class Heat_map extends Component {
                  height={300}>
                 <XAxis />
                 <YAxis />
-                <HeatmapSeries
+                <MarkSeries
                 className="heatmap-series-example"
-                colorRange={["red", "blue", "green", ]}
                 data={[
-                    {x: dummyx[0], y: dummyy[0], color: 'red'},
+                    {x: dummyx[0], y: dummyy[0]},
                     {x: dummyx[1], y: dummyy[1]},
                     {x: dummyx[2], y: dummyy[2]},
                     {x: dummyx[3], y: dummyy[3]},
