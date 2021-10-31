@@ -23,8 +23,8 @@ export default class Heat_map extends Component {
         a2_data: [],
         a2_datas: [], 
         selectedOption: null,
-        X_Coords = new Array(),
-        Y_Coords = new Array(),
+        X_Coords: new Array(),
+        Y_Coords: new Array(),
 
 
     }
