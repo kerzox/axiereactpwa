@@ -13,6 +13,8 @@ const dummyy = [1,3,3,3,1,4,2,3,4,4,1,4,3,4,5,2,1,3,1,4,5,1,2,3,4,1,2,3,4,1,2,4,
 const te = [[1,3],[3,3],[4,3],[2,5],[3,3],[1,1],[3,2],[4,5],[3,1],[3,4]]
 
 
+
+
 export default class Heat_map extends Component {
 
 
@@ -21,8 +23,8 @@ export default class Heat_map extends Component {
         a2_data: [],
         a2_datas: [], 
         selectedOption: null,
-        X_Coords: any = [],
-        Y_Coords: any = [],
+        X_Coords = new Array(),
+        Y_Coords = new Array(),
 
 
     }
@@ -117,8 +119,8 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
-                this.X_Coords.push(a2_data.payload.d.x_cord)
-                this.Y_Coords.push(a2_data.payload.d.y_cord)
+                X_Coords.push(a2_data.payload.d.x_cord)
+                Y_Coords.push(a2_data.payload.d.y_cord)
                 console.log("got one doc", this.X_Coords, ' ', this.Y_Coords )
 
 
