@@ -72,9 +72,9 @@ export default class Heat_map extends Component {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
 
-                var docks = [],
+                var docks = []
                     
-                for(var d in a2_data) { 
+                for (var d in a2_data) { 
                     docks.push({"id":a2_data.id})
                 }
 
