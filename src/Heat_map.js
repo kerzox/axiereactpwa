@@ -8,6 +8,8 @@ import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, HeatmapSeries, Ma
 const dummyx = [1,3,2,1,3,5,4,3,1,2,3,1,2,3,4,1,3,2,4,2,1,3,5,4,3,1,3,4,5,5,1,3,4,1,2,3,1]
 const dummyy = [1,3,4,3,5,4,2,3,4,4,1,4,3,4,5,2,1,3,1,4,5,1,2,3,4,1,2,3,4,1,2,4,1,4,5,2,1]
 const te = [[1,3],[3,3],[4,3],[2,5],[3,3],[1,1],[3,2],[4,5],[3,1],[3,4]]
+
+
 export default class Heat_map extends Component {
 
 
@@ -62,16 +64,27 @@ export default class Heat_map extends Component {
 // retrieves items from the database
     getAllDocuments = () =>{
 
+
+        const response = await CDB.get({
+            url: "https://c6b339ee-b547-4f06-a6f7-cf0c9abec3b2-bluemix.cloudantnosqldb.appdomain.cloud/a2_data/_all_docs"
+        });
+
+        let a2_datas = response.data.rows;
+        this.setState({ a2_datas })
+        console.log(a2_datas)
+
+
         console.log("getting all docs now ")
      // this will retrieve the headers of the contents, not the contents for each header
-        CDB.get(`/a2_data/_all_docs`, {
-            responseType: 'json',
-        })
+        //CDB.get(`/a2_data/_all_docs`, {
+          //  responseType: 'json',
+       // })
 
-            .then(response => {
-                const a2_datas = response.data.rows;
-                this.setState({ a2_datas })
-                console.log(a2_datas)
+        //    .then(response => {
+        //        const a2_datas = response.data.rows;
+         //       this.setState({ a2_datas })
+        //        console.log(a2_datas)
+
 
                 /*
                 var docks = []
@@ -116,9 +129,9 @@ export default class Heat_map extends Component {
 
              */
 
-             })
+            // })
 
-            .catch(error => console.error(`Error: ${error}`))
+          //  .catch(error => console.error(`Error: ${error}`))
 
     }
 
