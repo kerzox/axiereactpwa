@@ -119,8 +119,8 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
-                X_Coords.push(a2_data.payload.d.x_cord)
-                Y_Coords.push(a2_data.payload.d.y_cord)
+                this.X_Coords.push(a2_data.payload.d.x_cord)
+                this.Y_Coords.push(a2_data.payload.d.y_cord)
                 console.log("got one doc", this.X_Coords, ' ', this.Y_Coords )
 
 
