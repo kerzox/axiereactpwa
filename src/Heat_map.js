@@ -99,6 +99,7 @@ export default class Heat_map extends Component {
                     all_d : { "docs" : dat}
                  })
 
+                 
 
 
                     .then(response => {
