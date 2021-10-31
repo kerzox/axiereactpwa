@@ -5,8 +5,8 @@ import Chart from 'react-apexcharts'
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, HeatmapSeries} from 'react-vis';
 
 
-const dummyx = [1,3,2,1,3,5,4,3,1,2,3,1,2,3,4,1]
-const dummyy = [1,3,4,3,5,4,2,3,4,4,1,4,3,4,5,2 ]
+const dummyx = [1,3,2,1,3,5,4,3,1,2,3,1,2,3,4,1,3,2,4,2,1,3,5,4,3,1,3,4,5,5,1,3,4,1,2,3,1]
+const dummyy = [1,3,4,3,5,4,2,3,4,4,1,4,3,4,5,2,1,3,1,4,5,1,2,3,4,1,2,3,4,1,2,4,1,4,5,2,1]
 const te = [[1,3],[3,3],[4,3],[2,5],[3,3],[1,1],[3,2],[4,5],[3,1],[3,4]]
 export default class Heat_map extends Component {
 
@@ -187,18 +187,37 @@ export default class Heat_map extends Component {
                 className="heatmap-series-example"
                 colorRange={["red", "blue"]}
                 data={[
-                 //   {x: 1, y: 5},
-                  //  {x: 2, y: 4},
-                  //  {x: 3, y: 3},
-                  //  {x: 4, y: 2},
-                  //  {x: 5, y: 1},
-                  //  {x: 1, y: 1},
-                  //  {x: 2, y: 2},
-                  //  {x: 3, y: 3},
-                  //  {x: 4, y: 4},
-                  //  {x: 5, y: 5},
+                    {x: dummyx[0], y: dummyy[0]},
+                    {x: dummyx[1], y: dummyy[1]},
+                    {x: dummyx[2], y: dummyy[2]},
+                    {x: dummyx[3], y: dummyy[3]},
+                    {x: dummyx[4], y: dummyy[4]},
+                    {x: dummyx[5], y: dummyy[5]},
+                    {x: dummyx[6], y: dummyy[6]},
+                    {x: dummyx[7], y: dummyy[7]},
+                    {x: dummyx[8], y: dummyy[8]},
+                    {x: dummyx[9], y: dummyy[9]},
+                    {x: dummyx[10], y: dummyy[10]},
+                    {x: dummyx[11], y: dummyy[11]},
+                    {x: dummyx[12], y: dummyy[12]},
+                    {x: dummyx[13], y: dummyy[13]},
+                    {x: dummyx[14], y: dummyy[14]},
+                    {x: dummyx[15], y: dummyy[15]},
+                    {x: dummyx[16], y: dummyy[16]},
+                    {x: dummyx[17], y: dummyy[18]},
+                    {x: dummyx[18], y: dummyy[18]},
+                    {x: dummyx[19], y: dummyy[19]},
+                    {x: dummyx[20], y: dummyy[20]},
+                    {x: dummyx[21], y: dummyy[21]},
+                    {x: dummyx[22], y: dummyy[22]},
+                    {x: dummyx[23], y: dummyy[23]},
+                    {x: dummyx[24], y: dummyy[24]},
+                    {x: dummyx[25], y: dummyy[25]},
+                    {x: dummyx[26], y: dummyy[26]},
+                    {x: dummyx[27], y: dummyy[27]},
+                    {x: dummyx[28], y: dummyy[28]},
+                    {x: dummyx[29], y: dummyy[29]},
 
-                  {x: dummyx, y: dummyy}
                   
                     
                     
