@@ -189,10 +189,10 @@ export default class Heat_map extends Component {
                 data={[
                     {x: 1, y: 0},
                     {x: 1, y: 5},
-                    {x: 1, y: 10},
-                    {x: 1, y: 10},
-                    {x: 2, y: 10},
-                    {x: 2, y: 10},
+                    {x: 1, y: 5},
+                    {x: 1, y: 2},
+                    {x: 2, y: 3},
+                    {x: 2, y: 3},
                   ]}/>
             </XYPlot>
             {/*
