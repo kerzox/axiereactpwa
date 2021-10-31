@@ -75,7 +75,7 @@ export default class Heat_map extends Component {
                 var docks = []
                     
                 for (var d in a2_datas) { 
-                    docks.push({"id":a2_datas.id})
+                    docks.push({"id":d.id})
                 }
 
                 var docs = {"docs": docks}
