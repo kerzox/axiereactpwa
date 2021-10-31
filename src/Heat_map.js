@@ -96,7 +96,7 @@ export default class Heat_map extends Component {
                 CDB.post({
                     url: "https://c6b339ee-b547-4f06-a6f7-cf0c9abec3b2-bluemix.cloudantnosqldb.appdomain.cloud/a2_data/_bulk_get",
                     
-                    all_d : { "docs" : dat}
+                    data : { "docs" : dat}
                  })
 
                  
