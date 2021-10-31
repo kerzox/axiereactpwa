@@ -20,7 +20,10 @@ export default axios.create({
          //"Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
          //"Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
        
-    }
+    },
+
+    auth: {username: `${username}`, password: `${password}`}
+
 
 
 });
