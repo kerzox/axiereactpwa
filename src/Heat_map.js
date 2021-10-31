@@ -184,10 +184,15 @@ export default class Heat_map extends Component {
                 <XAxis />
                 <YAxis />
                 <HeatmapSeries
+                className="heatmap-series-example"
+                colorRange={["red", "blue"]}
                 data={[
-                    {x: 1, y: 0, color: "#f321"},
-                    {x: 1, y: 5, color: "#f22"},
-                    {x: 1, y: 10, color: "#331"}
+                    {x: 1, y: 0},
+                    {x: 1, y: 5},
+                    {x: 1, y: 10},
+                    {x: 1, y: 10},
+                    {x: 2, y: 10},
+                    {x: 2, y: 10},
                   ]}/>
             </XYPlot>
             {/*
