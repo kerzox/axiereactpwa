@@ -3,10 +3,13 @@ import CDB from './CDB';
 import { LineChart, Line } from 'recharts';
 import Chart from 'react-apexcharts'
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, HeatmapSeries, MarkSeries} from 'react-vis';
+import ScriptTag from 'react-script-tag';
 
 
-const dummyx = [1,3,2,1,3,5,4,3,1,2,3,1,2,3,4,1,3,2,4,2,1,3,5,4,3,1,3,4,5,5,1,3,4,1,2,3,1]
-const dummyy = [1,3,4,3,5,4,2,3,4,4,1,4,3,4,5,2,1,3,1,4,5,1,2,3,4,1,2,3,4,1,2,4,1,4,5,2,1]
+const dummyx = [1,3,3,3,1,5,4,3,1,2,3,1,2,3,4,1,3,2,4,2,1,3,5,4,3,1,3,4,5,5,1,3,4,1,2,3,1]
+const dummyy = [1,3,3,3,1,4,2,3,4,4,1,4,3,4,5,2,1,3,1,4,5,1,2,3,4,1,2,3,4,1,2,4,1,4,5,2,1]
+
+
 const te = [[1,3],[3,3],[4,3],[2,5],[3,3],[1,1],[3,2],[4,5],[3,1],[3,4]]
 
 
@@ -119,7 +122,7 @@ export default class Heat_map extends Component {
                 //console.log("the data", a2_datas[3000])
 
                 
-                for (var i = 0; i < 25; i++) {
+                for (var i = 0; i < 20; i++) {
                     var xwda = a2_datas[i].id
                     this.getOneDoc(`${xwda}`)
                     //setTimeout(function(){},1000)
@@ -201,6 +204,8 @@ export default class Heat_map extends Component {
     render() {
         var { a2_datas, a2_data, X_Coords, Y_Coords, isLoaded } = this.state
        
+        
+
        // if(!isLoaded){
        //     console.log('calling the function')
         //    this.get_all_cords();
@@ -216,12 +221,12 @@ export default class Heat_map extends Component {
         // This will make everything visible, if it's in here it can be seen on the page
         return( 
 
-
-
+           
             <div>
             Yaddayada dwadaw
 
-      
+            <ScriptTag isHydrating={true} type="text/javascript" src= "https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js" />
+            <ScriptTag isHydrating={true} type="text/javascript" src= "https://cdn.anychart.com/releases/8.7.1/js/anychart-heatmap.min.js" />
 
             <div id="chart">
             <Chart options={this.state.options} series={this.state.series} type="heatmap" height={350} />
@@ -236,8 +241,8 @@ export default class Heat_map extends Component {
                 <HeatmapSeries
                 className="heatmap-series-example"
                 data={[
-                    {x: dummyx[0], y: dummyy[0]},
-                    {x: dummyx[1], y: dummyy[1]},
+                    {x: dummyx[0], y: dummyy[0], color:100},
+                    {x: dummyx[1], y: dummyy[1], color:100},
                     {x: dummyx[2], y: dummyy[2]},
                     {x: dummyx[3], y: dummyy[3]},
                     {x: dummyx[4], y: dummyy[4]},
