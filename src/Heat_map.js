@@ -20,37 +20,11 @@ export default class Heat_map extends Component {
     state = {
         a2_data: [],
         a2_datas: [], 
-        a2_datass: [], 
         selectedOption: null,
         X_Coords: [],
         Y_Coords: [],
-        isLoaded: false,
 
 
-        options: {
-            chart: {
-              height: 350,
-              type: 'heatmap',
-            },
-            dataLabels: {
-              enabled: false
-            },
-            colors: ["#008FFB"],
-            title: {
-              text: 'HeatMap Chart (Single color)'
-            },
-          },
-
-
-        series: [{
-            name: 'X_data',
-            data: te
-          },
-          {
-            name: 'Y_data',
-            data: dummyy
-        }
-    ],
     }
 
 
@@ -89,6 +63,8 @@ export default class Heat_map extends Component {
 
 
 
+/*
+
                 var dat = []
                     for(var item in a2_datas){
                     dat.push({ id: a2_datas[item].id }) //might need to add rev in here too if exists
@@ -108,17 +84,17 @@ export default class Heat_map extends Component {
 
                     })
 
-
+*/
 
 
                 
-             ///   for (var i = 0; i < 20; i++) {
-            //        var xwda = a2_datas[i].id
-              //      this.getOneDoc(`${xwda}`)
-              //      //setTimeout(function(){},1000)
-              //      console.log("the id ", `${xwda}`)
-              //      console.log('run retrieval')
-              //  };
+                for (var i = 0; i < 20; i++) {
+                    var xwda = a2_datas[i].id
+                    this.getOneDoc(`${xwda}`)
+
+                    console.log("the id ", `${xwda}`)
+                    console.log('run retrieval')
+                };
 
            
 
@@ -218,9 +194,7 @@ export default class Heat_map extends Component {
             <ScriptTag isHydrating={true} type="text/javascript" src= "https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js" />
             <ScriptTag isHydrating={true} type="text/javascript" src= "https://cdn.anychart.com/releases/8.7.1/js/anychart-heatmap.min.js" />
 
-            <div id="chart">
-            <Chart options={this.state.options} series={this.state.series} type="heatmap" height={350} />
-            </div>
+            
 
 
             <XYPlot
