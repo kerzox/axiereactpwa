@@ -15,6 +15,7 @@ export default class Heat_map extends Component {
     state = {
         a2_data: [],
         a2_datas: [], 
+        a2_datass: [], 
         selectedOption: null,
         X_Coords: [],
         Y_Coords: [],
@@ -70,19 +71,46 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
+
+                var docks = [],
+                    
+                for(var d in a2_data) { 
+                    docks.push({"id":a2_data.id})
+                }
+
+                var docs = {"docs": docks}
+
+                console.log(docks)
+
+                CDB.post(`/a2_data/_bulk_get`, {
+                    responseType: 'json',
+                    docs
+                    
+
+                    
+                })
+
+
+                    .then(response => {
+
+                        console.log(response)
+
+                    })
+
+
                 //console.log("the data", a2_datas[0])
                 //console.log("the data", a2_datas[1])
                 //console.log("the data", a2_datas[2])
                 //console.log("the data", a2_datas[3000])
 
                 
-                for (var i = 0; i < 25; i++) {
-                    var xwda = a2_datas[i].id
-                    this.getOneDoc(`${xwda}`)
-                    setTimeout(function(){},1000)
+             //   for (var i = 0; i < 25; i++) {
+               //     var xwda = a2_datas[i].id
+              //      this.getOneDoc(`${xwda}`)
+              //      setTimeout(function(){},1000)
                     //console.log("the id ", `${xwda}`)
                 //    console.log('run retrieval')
-                };
+             //   };
 
 
              })
@@ -90,6 +118,12 @@ export default class Heat_map extends Component {
             .catch(error => console.error(`Error: ${error}`))
 
     }
+
+  
+
+
+
+
 
     getOneDoc = (docid) => {
 
