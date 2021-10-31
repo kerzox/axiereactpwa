@@ -184,7 +184,6 @@ export default class Heat_map extends Component {
                 <XAxis />
                 <YAxis />
                 <HeatmapSeries
-                 className="heatmap-series-example"
                 data={[
                     {x: 1, y: 0, color: "#f00"},
                     {x: 1, y: 5, color: "#f00"},
