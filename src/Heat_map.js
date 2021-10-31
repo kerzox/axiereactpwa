@@ -185,9 +185,9 @@ export default class Heat_map extends Component {
                 <YAxis />
                 <HeatmapSeries
                 data={[
-                    {x: 1, y: 0, color: "#f00"},
-                    {x: 1, y: 5, color: "#f00"},
-                    {x: 1, y: 10, color: "#0f0"}
+                    {x: 1, y: 0, color: "#f321"},
+                    {x: 1, y: 5, color: "#f22"},
+                    {x: 1, y: 10, color: "#331"}
                   ]}/>
             </XYPlot>
             {/*
