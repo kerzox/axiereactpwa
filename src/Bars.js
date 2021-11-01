@@ -25,6 +25,7 @@ function make2DArray(rows, cols) {
 	return arr;
   }
 
+  
 
 class Bars extends Component {
 
@@ -143,6 +144,7 @@ class Bars extends Component {
 				<div class="center">
                 <div class="container">
 					<h1>Room usage</h1>
+					<p>The y-axis represents the total number of times the room has been visited 20</p>
 					<XYPlot xType="ordinal" width={300} height={300} xDistance={100}>
 					<VerticalGridLines />
 					<HorizontalGridLines />
