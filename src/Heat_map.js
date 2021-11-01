@@ -6,13 +6,7 @@ import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, HeatmapSeries, Ma
 import ScriptTag from 'react-script-tag';
 
 
-const X_cord = [1,3,3,3,1,5,4,3,1,2,3,1,2,3,4,1,3,2,4,2,1,3,5,4,3,1,3,4,5,5,1,3,4,1,2,3,1]
-const Y_cord = [1,3,3,3,1,4,2,3,4,4,1,4,3,4,5,2,1,3,1,4,5,1,2,3,4,1,2,3,4,1,2,4,1,4,5,2,1]
-
-
-const te = [[1,3],[3,3],[4,3],[2,5],[3,3],[1,1],[3,2],[4,5],[3,1],[3,4]]
-
-
+// make the coorindates into a 2d array, see code below
 function make2DArray(rows, cols) {
 	var arr = new Array(rows);
 	for (var i = 0; i < arr.length; i++) {
@@ -27,7 +21,7 @@ function make2DArray(rows, cols) {
 	return arr;
   }
 
-
+// Sort through the coordinates picked up in the code below and put them in a shape that can be interpretable by a heatmap library
 function sortData(x_cords, y_cords) {
     var data = {
         x: 0,
@@ -61,7 +55,7 @@ function sortData(x_cords, y_cords) {
 export default class Heat_map extends Component {
 
 
-
+    // define some useful variables
     state = {
         a2_data: [],
         a2_datas: [], 
@@ -97,6 +91,7 @@ export default class Heat_map extends Component {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
 
+                // grab a group of the most recent entries to the database to grab only recent information
                 for (var i = response.data.rows.length - 20; i < response.data.rows.length; i++) {
                     var xwda = a2_datas[i].id
                     this.getOneDoc(`${xwda}`);
@@ -120,6 +115,8 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
+
+                // store the retrieved coordinates
                 this.state.X_Coords.push(a2_data.payload.d.x_cord)
                 this.state.Y_Coords.push(a2_data.payload.d.y_cord)
 
@@ -148,6 +145,9 @@ export default class Heat_map extends Component {
    
             }
 
+
+            {// return a heatmap with x and y coords from data
+            }
             <div class="center">
                 <div class="container">
             <XYPlot
