@@ -13,7 +13,50 @@ const Y_cord = [1,3,3,3,1,4,2,3,4,4,1,4,3,4,5,2,1,3,1,4,5,1,2,3,4,1,2,3,4,1,2,4,
 const te = [[1,3],[3,3],[4,3],[2,5],[3,3],[1,1],[3,2],[4,5],[3,1],[3,4]]
 
 
+function make2DArray(rows, cols) {
+	var arr = new Array(rows);
+	for (var i = 0; i < arr.length; i++) {
+	  arr[i] = new Array(cols);
+	}
 
+    for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < cols; j++) {
+            arr[i][j] = 0
+        }
+    }
+	return arr;
+  }
+
+
+function sortData(x_cords, y_cords) {
+    var data = {
+        x: 0,
+        y: 0,
+        color: 0
+    }
+
+    var sorted = [];
+
+    var count = make2DArray(6, 6)
+
+    x_cords.forEach(x => {
+        y_cords.forEach(y => {
+            count[x][y] += 1
+        });
+    });
+
+    x_cords.forEach(x => {
+        y_cords.forEach(y => {
+            sorted.push({
+                x: x,
+                y: y,
+                color: count[x][y]
+            })
+        });
+    });
+
+    return sorted;
+}
 
 export default class Heat_map extends Component {
 
@@ -25,10 +68,10 @@ export default class Heat_map extends Component {
         selectedOption: null,
         X_Coords: new Array(),
         Y_Coords: new Array(),
-
+        heat_colours: null,
 
     }
-
+    
 
     
 
@@ -54,14 +97,9 @@ export default class Heat_map extends Component {
                 const a2_datas = response.data.rows;
                 this.setState({ a2_datas })
 
-
-
-
-                for (var i = 0; i < 20; i++) {
+                for (var i = response.data.rows.length - 20; i < response.data.rows.length; i++) {
                     var xwda = a2_datas[i].id
-                    this.getOneDoc(`${xwda}`)
-
-                  
+                    this.getOneDoc(`${xwda}`);
                 };
 
            
@@ -71,12 +109,6 @@ export default class Heat_map extends Component {
             .catch(error => console.error(`Error: ${error}`))
 
     }
-
-  
-
-
-
-
 
     getOneDoc = (docid) => {
 
@@ -88,9 +120,9 @@ export default class Heat_map extends Component {
             .then(response => {
                 const a2_data = response.data;
                 this.setState({ a2_data })
-                //this.X_Coords.push(a2_data.payload.d.x_cord)
-                //this.Y_Coords.push(a2_data.payload.d.y_cord)
-                //console.log("got one doc", this.X_Coords, ' ', this.Y_Coords )
+                this.state.X_Coords.push(a2_data.payload.d.x_cord)
+                this.state.Y_Coords.push(a2_data.payload.d.y_cord)
+
 
 
             })
@@ -101,14 +133,10 @@ export default class Heat_map extends Component {
             
     };
 
-   
-    
-
-
     render() {
         var { a2_datas, a2_data, X_Coords, Y_Coords, isLoaded } = this.state
-       
-        
+
+           
         // This will make everything visible, if it's in here it can be seen on the page
         return( 
 
@@ -116,15 +144,9 @@ export default class Heat_map extends Component {
             <div>
             <h1>Heatmap of room</h1>
 
-            {//This following code makes it possible to make a heatmap 
-            
+            {
+   
             }
-
-
-            <ScriptTag isHydrating={true} type="text/javascript" src= "https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js" />
-            <ScriptTag isHydrating={true} type="text/javascript" src= "https://cdn.anychart.com/releases/8.7.1/js/anychart-heatmap.min.js" />
-
-            
 
 
             <XYPlot
@@ -135,46 +157,12 @@ export default class Heat_map extends Component {
                 <HeatmapSeries
                 className="heatmap-series-example"
                 colorRange={['red', 'yellow']}
-                data={[
-                    {x: X_cord[0], y: Y_cord[0], color:3},
-                    {x: X_cord[1], y: Y_cord[1], color:2},
-                    {x: X_cord[2], y: Y_cord[2], color:1},
-                    {x: X_cord[3], y: Y_cord[3], color:4},
-                    {x: X_cord[4], y: Y_cord[4], color:1},
-                    {x: X_cord[5], y: Y_cord[5], color:2},
-                    {x: X_cord[6], y: Y_cord[6], color:5},
-                    {x: X_cord[7], y: Y_cord[7], color:4},
-                    {x: X_cord[8], y: Y_cord[8], color:2},
-                    {x: X_cord[9], y: Y_cord[9], color:1},
-                    {x: X_cord[10], y: Y_cord[10], color:3},
-                    {x: X_cord[11], y: Y_cord[11], color:4},
-                    {x: X_cord[12], y: Y_cord[12], color:4},                    
-                    {x: X_cord[13], y: Y_cord[13], color:1},
-                    {x: X_cord[14], y: Y_cord[14], color:3},
-                    {x: X_cord[15], y: Y_cord[15], color:4},
-                    {x: X_cord[16], y: Y_cord[16], color:4},
-                    {x: X_cord[17], y: Y_cord[18], color:4},
-                    {x: X_cord[18], y: Y_cord[18], color:2},
-                    {x: X_cord[19], y: Y_cord[19], color:5},
-                    {x: X_cord[20], y: Y_cord[20], color:5},
-                    {x: X_cord[21], y: Y_cord[21], color:1},
-                    {x: X_cord[22], y: Y_cord[22], color:3},
-                    {x: X_cord[23], y: Y_cord[23], color:1},
-                    {x: X_cord[24], y: Y_cord[24], color:1},
-                    {x: X_cord[25], y: Y_cord[25], color:4},
-                    {x: X_cord[26], y: Y_cord[26], color:5},
-                    {x: X_cord[27], y: Y_cord[27], color:2},
-                    {x: X_cord[28], y: Y_cord[28], color:5},
-                    {x: X_cord[29], y: Y_cord[29], color:3},
-                    
-
-                  ]}/>
+                data={sortData(X_Coords, Y_Coords)}/>
             </XYPlot>
-           
-
 
             </div>
         )
+
     }     
 }
 
