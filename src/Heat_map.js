@@ -148,7 +148,8 @@ export default class Heat_map extends Component {
    
             }
 
-
+            <div class="center">
+                <div class="container">
             <XYPlot
                 width={300}
                  height={300}>
@@ -159,7 +160,8 @@ export default class Heat_map extends Component {
                 colorRange={['red', 'yellow']}
                 data={sortData(X_Coords, Y_Coords)}/>
             </XYPlot>
-
+                </div>
+            </div>
             </div>
         )
 
