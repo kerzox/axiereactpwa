@@ -133,12 +133,12 @@ class Bars extends Component {
 
 		var labels = []
 		labels.push( 
-			{x: `Room 1`, y: percentage[0].y + 1, label: `${(percentage[0].y / times_visited * 100).toFixed(2)}`, style: {fontSize: 10} }, {x: `Room 2`, y: percentage[0].y + 1, label: `${(percentage[1].y / times_visited * 100).toFixed(2)}`, style: {fontSize: 10} })
+			{x: `Room 1`, y: percentage[0].y + 1, label: `${(percentage[0].y / times_visited * 100).toFixed(2)}%`, style: {fontSize: 10} }, {x: `Room 2`, y: percentage[0].y + 1, label: `${(percentage[1].y / times_visited * 100).toFixed(2)}%`, style: {fontSize: 10} })
 
 
 		return(
 			<div>
-				<h1>Page for Mark</h1>
+				<h1>Statistics</h1>
 
 				<div class="center">
                 <div class="container">
