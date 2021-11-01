@@ -6,6 +6,7 @@ import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, HeatmapSeries, Ma
 import ScriptTag from 'react-script-tag';
 
 
+
 // make the coorindates into a 2d array, see code below
 function make2DArray(rows, cols) {
 	var arr = new Array(rows);
