@@ -14,6 +14,7 @@ class Seyed extends Component {
 		return(
 			<div>
 				<h1>Page for seyed</h1>
+				<p>This is a test</p>
 				
 			</div>
 		);
